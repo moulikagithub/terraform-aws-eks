@@ -14,7 +14,7 @@ module "node" {
   vpc_id         = data.aws_ssm_parameter.vpc_id.value
   sg_name        = "eks-node"
 }
-module "vpn" {
+module "ingress" {
   source         = "git::https://github.com/moulikagithub/terraform-aws-sg.git?ref=main"
   projectname   = var.projectname
   environment    = var.environment

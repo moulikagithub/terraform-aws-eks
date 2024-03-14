@@ -2,13 +2,13 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "5.31.0" # AWS provider version, not terraform version
+      version = "~> 5.0" # AWS provider version, not terraform version
     }
   }
 
   backend "s3" {
     bucket = "kalidindi-bucket-dev"
-    key    = "vpc"
+    key    = "eks"
     region = "us-east-1"
     dynamodb_table = "kalidindi-locking-dev"
   }

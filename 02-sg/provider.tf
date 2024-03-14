@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket = "kalidindi-bucket-dev"
-    key    = "vpc"
+    key    = "sg"
     region = "us-east-1"
     dynamodb_table = "kalidindi-locking-dev"
   }
